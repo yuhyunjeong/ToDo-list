@@ -6,10 +6,11 @@ function TodoBoard(props) {
   return (
     <div>
       <h1>TodoList</h1>
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {/* add items */}
+      {/* array method */}
+      {props.toDoList.map((item) => (
+        <TodoItem item={item} />
+      ))}
     </div>
   );
 }

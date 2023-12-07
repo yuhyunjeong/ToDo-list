@@ -1,7 +1,7 @@
 import React from "react";
 
-function TodoItem() {
-  return <div className="todo-item">study!</div>;
+function TodoItem(props) {
+  return <div className="todo-item">{props.item}</div>;
 }
 
 export default TodoItem;

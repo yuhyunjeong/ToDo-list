@@ -29,6 +29,12 @@ Props are like function arguments in JavaScript and attributes in HTML.
 
 To send props into a component, use the same syntax as HTML attributes:
 
+### Array Methods
+
+One of the most useful in React is the .map() array method.
+
+The .map() method allows you to run a function on each item in the array, returning a new array as the result. So, map() can be used to generate lists.
+
 ### Spread Operator
 
 The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object
