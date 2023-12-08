@@ -45,6 +45,10 @@ One of the most useful in React is the .map() array method.
 
 The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object
 
+### React icons
+
+npm i react-icons
+
 ## 🛠️ TroubleShooting
 
 ### Objects are not valid as a react child

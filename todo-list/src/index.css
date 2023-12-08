@@ -9,7 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: rgba(242, 91, 184, 0.957);
+  background: rgba(246, 100, 190, 0.69);
 }
 .container {
   width: 400px;
@@ -34,7 +34,7 @@ body {
 .inputField {
   width: 100%;
   padding: 5px 1rem;
-  background: #3e3e5a;
+  background: #b592dc52;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -42,6 +42,7 @@ body {
 }
 
 .inputField input {
+  width: 100%;
   background: transparent;
   padding: 10px;
   color: rgb(161, 160, 160);
@@ -52,7 +53,7 @@ body {
 }
 
 .inputField button {
-  background: #3d79b1;
+  background: rgba(242, 91, 184, 0.957);
   color: #fff;
   font-size: 2rem;
   width: 35px;
@@ -88,12 +89,12 @@ button:hover {
   gap: 10px;
 }
 .list-items .items {
-  background: #44446b;
+  background: #b592dc52;
   border-radius: 10px;
   padding: 14px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   color: rgb(186, 186, 186);
 }
 input[type="checkbox"] {

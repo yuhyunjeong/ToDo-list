@@ -1,7 +1,15 @@
 import React from "react";
 
-function TodoItem(props) {
-  return <div className="todo-item">{props.item}</div>;
+function TodoItem(items) {
+  return (
+    <li className="items">
+      
+      <div className="items-text">
+        <input type="checkbox" />
+        {items.item}
+      </div>
+    </li>
+  );
 }
 
 export default TodoItem;
