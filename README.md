@@ -11,7 +11,11 @@ npx create-react-app [project name]
 All of the built-in browser components support some props and events.
 
 - input
-  - onChange: An Event handler function. Required for controlled inputs. Fires immediately when the input’s value is changed by the user (for example, it fires on every keystroke). Behaves like the browser input event.
+  - onChange: <p>
+    An Event handler function. <p>
+    Required for controlled inputs. <p>
+    Fires immediately when the input’s value is changed by the user (for example, it fires on every keystroke). <p>
+    Behaves like the browser input event.
 
 ### Hooks
 
@@ -23,9 +27,9 @@ Hooks let you use different React features from your components.
 
 ### Props
 
-Props are arguments passed into React components via HTML attributes.
+arguments passed into React components via HTML attributes.
 
-Props are like function arguments in JavaScript and attributes in HTML.
+like function arguments in JavaScript and attributes in HTML.
 
 To send props into a component, use the same syntax as HTML attributes:
 
@@ -33,7 +37,9 @@ To send props into a component, use the same syntax as HTML attributes:
 
 One of the most useful in React is the .map() array method.
 
-The .map() method allows you to run a function on each item in the array, returning a new array as the result. So, map() can be used to generate lists.
+- .map()
+  - allows you to run a function on each item in the array, returning a new array as the result.
+  - So, map() can be used to generate lists.
 
 ### Spread Operator
 
