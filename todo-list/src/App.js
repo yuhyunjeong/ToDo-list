@@ -1,28 +1,31 @@
 import { useState } from "react";
 import "./App.css";
 import TodoBoard from "./component/TodoBoard";
+import TodoInput from "./component/TodoInput";
 
 //1. an input box and a button
 //2. enter values in the input box and click the button to add items
 //3. a delete button
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
-  const [toDoList, setToDoList] = useState([]);
-  const addItem = () => {
-    console.log("i'm here!", inputValue);
-    setToDoList([...toDoList, inputValue]); //spread operator
+  //const [inputValue, setInputValue] = useState(""); // update value
+
+  const [toDoList, setToDoList] = useState([]); // update list
+
+  const addItem = (taskName) => {
+    console.log("i'm here!", taskName);
+    const newTask = { taskName, checked: false };
+
+    setToDoList([...toDoList, newTask.taskName]); //spread operator
   };
+
   return (
     <main>
-      <input
-        value={inputValue}
-        type="text"
-        onChange={(event) => setInputValue(event.target.value)}
-      />
-      {/* event.target.value : update the state variable on any edits */}
-      <button onClick={addItem}>add</button>
-      <TodoBoard toDoList={toDoList} /> {/* props */}
+      <div className="container">
+        <h1>To Do List</h1>
+        <TodoInput addItem={addItem} />
+        <TodoBoard toDoList={toDoList} /> {/* props */}
+      </div>
     </main>
   );
 }

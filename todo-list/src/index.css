@@ -9,11 +9,11 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: #80c0eb;
+  background: rgba(242, 91, 184, 0.957);
 }
 .container {
   width: 400px;
-  background: #282851;
+  background: #282851cf;
   padding: 1rem;
   /* margin: 5rem auto; */
   margin: 3rem auto;

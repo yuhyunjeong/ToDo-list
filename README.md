@@ -44,3 +44,10 @@ One of the most useful in React is the .map() array method.
 ### Spread Operator
 
 The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object
+
+## 🛠️ TroubleShooting
+
+### Objects are not valid as a react child
+
+- Cause : Passing an Object as a React Child
+- Solution : Rendering Object Properties
