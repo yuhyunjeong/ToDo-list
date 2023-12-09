@@ -7,7 +7,7 @@ function TodoItem(items) {
       
       <div className="items-text">
         <input type="checkbox" />
-        {items.item}
+        {items.task}
       </div>
       <RiDeleteBin5Line class="delete-icon" />
     </li>

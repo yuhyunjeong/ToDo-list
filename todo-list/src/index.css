@@ -116,7 +116,8 @@ input[type="checkbox"] {
 }
 .notify {
   text-align: center;
-  color: rgb(161, 160, 160);
+  /*color: rgb(161, 160, 160);*/
+  color: rgba(244, 180, 220, 0.981);
 }
 
 .delete-icon {

@@ -9,10 +9,14 @@ function TodoBoard(props) {
       <ul className="list-items">
         {/* add items */}
         {/* array method */}
-        {props.toDoList.map((item) => (
-          <TodoItem item={item} />
+        {props.toDoList.map((task, key) => (
+          <TodoItem task={task} key={key} />
         ))}
       </ul>
+
+      {props.toDoList.length === 0 ? (
+        <p className="notify">You are done!</p>
+      ) : null}
     </div>
   );
 }
