@@ -2,7 +2,9 @@
 
 ## ✅ What I learned
 
-### Install React app
+### About React 💡
+
+### Install
 
 npx create-react-app [project name]
 
@@ -47,9 +49,10 @@ The JavaScript spread operator (...) allows us to quickly copy all or part of an
 
 ### React icons
 
-npm i react-icons
+npm i react-icons<p>
+https://react-icons.github.io/react-icons/
 
-## 🛠️ TroubleShooting
+## 🛠️ Trouble Shooting
 
 ### Objects are not valid as a react child
 

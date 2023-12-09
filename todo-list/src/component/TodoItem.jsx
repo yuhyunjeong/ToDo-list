@@ -1,4 +1,5 @@
 import React from "react";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 function TodoItem(items) {
   return (
@@ -8,6 +9,7 @@ function TodoItem(items) {
         <input type="checkbox" />
         {items.item}
       </div>
+      <RiDeleteBin5Line class="delete-icon" />
     </li>
   );
 }
