@@ -9,7 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: rgba(246, 100, 190, 0.69);
+  background: rgba(240, 75, 177, 0.423);
 }
 .container {
   width: 400px;
@@ -22,7 +22,8 @@ body {
 .container h1 {
   text-align: center;
   font-family: "Monoton";
-  color: rgb(161, 160, 160);
+  /* color: rgb(161, 160, 160);*/
+  color: rgba(244, 180, 220, 0.981);
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -45,11 +46,12 @@ body {
   width: 100%;
   background: transparent;
   padding: 10px;
-  color: rgb(161, 160, 160);
+  color: rgba(244, 180, 220, 0.981);
   font-size: 1rem;
 }
 .inputField input::placeholder {
-  color: rgb(161, 160, 160);
+  /*color: rgb(161, 160, 160);*/
+  color: rgba(244, 180, 220, 0.981);
 }
 
 .inputField button {
@@ -75,7 +77,8 @@ button:hover {
   margin-top: 2rem;
 }
 .toDoList span {
-  color: rgb(161, 160, 160);
+  /*color: rgb(161, 160, 160);*/
+  color: rgba(244, 180, 220, 0.981);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
@@ -95,7 +98,8 @@ button:hover {
   display: flex;
   align-items: center;
   /*justify-content: space-between;*/
-  color: rgb(186, 186, 186);
+  /*color: rgb(186, 186, 186);*/
+  color: rgba(244, 180, 220, 0.981);
 }
 input[type="checkbox"] {
   padding: 5px;
