@@ -1,34 +1,22 @@
-import React, { useState } from "react";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
-const TodoItem = ({ addItem }) => {
-  const [inputValue, setInputValue] = useState(""); // update value
-
-  console.log("inputValue: ", inputValue);
-
-  function handleInputValue(event) {
-    setInputValue(event.target.value);
-    // event.target.value : update the state variable on any edits
-  }
-
-  function handleAddItem(event) {
-    event.preventDefault();
-    if (inputValue.trim() === "") return;
-    addItem(inputValue);
-    setInputValue(""); // initialize input box
-  }
-
+function TodoItem({ task, deleteItem, toggleCheck }) {
   return (
-    <form className="inputField" onSubmit={handleAddItem}>
-      <input
-        value={inputValue}
-        type="text"
-        placeholder="Add Tasks!"
-        onChange={handleInputValue}
+    <li className="items">
+      <div className="items-text">
+        <input
+          type="checkbox"
+          checked={task.checked}
+          onChange={() => toggleCheck(task.taskName)}
+        />
+        <p className={task.checked ? "isChecked" : ""}>{task.taskName}</p>
+      </div>
+      <RiDeleteBin5Line
+        className="delete-icon"
+        onClick={() => deleteItem(task.taskName)}
       />
-
-      <button>+</button>
-    </form>
+    </li>
   );
-};
+}
 
 export default TodoItem;

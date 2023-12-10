@@ -1,4 +1,18 @@
-# ToDo-list
+# 📝 ToDo-list
+
+## 💻 Process
+
+### App Component
+
+serves as the entry point to this Todo-List app
+
+### TodoList Component
+
+responsible for managing the list of tasks and handling task-related functionality
+
+### TodoItem Component
+
+represents an individual task in Todo-List
 
 ## ✅ What I learned
 
@@ -10,42 +24,34 @@ npx create-react-app [project name]
 
 ### Components
 
-All of the built-in browser components support some props and events.
+All of the built-in browser components support some props and events
 
 - input
-  - onChange: <p>
-    An Event handler function. <p>
-    Required for controlled inputs. <p>
-    Fires immediately when the input’s value is changed by the user (for example, it fires on every keystroke). <p>
-    Behaves like the browser input event.
+  - onChange: <p></p>
+    Fires immediately when the input’s value is changed by the user (for example, it fires on every keystroke)
 
 ### Hooks
 
-Hooks let you use different React features from your components.
+Hooks let you use different React features from your components
 
 - State Hooks
-  - State lets a component “remember” information like user input.
+  - State lets a component “remember” information like user input
   - import { useState } from "react";
 
 ### Props
 
-arguments passed into React components via HTML attributes.
-
-like function arguments in JavaScript and attributes in HTML.
-
-To send props into a component, use the same syntax as HTML attributes:
+arguments passed into React components via HTML attributes
 
 ### Array Methods
 
-One of the most useful in React is the .map() array method.
+One of the most useful in React is the .map() array method
 
 - .map()
-  - allows you to run a function on each item in the array, returning a new array as the result.
-  - So, map() can be used to generate lists.
+  - allows you to run a function on each item in the array, returning a new array as the result
 
 ### Spread Operator
 
-The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object
+JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object
 
 ### React icons
 
