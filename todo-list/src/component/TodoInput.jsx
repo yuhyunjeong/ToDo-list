@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const TodoInput = ({ addItem }) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(""); // update value
 
-  console.log(inputValue);
+  console.log("inputValue: ", inputValue);
 
   function handleInputValue(event) {
     setInputValue(event.target.value);
@@ -12,7 +12,9 @@ const TodoInput = ({ addItem }) => {
 
   function handleAddItem(event) {
     event.preventDefault();
+    if (inputValue.trim() === "") return;
     addItem(inputValue);
+    setInputValue(""); // initialize input box
   }
 
   return (

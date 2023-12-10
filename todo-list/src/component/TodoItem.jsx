@@ -1,17 +1,19 @@
 import React from "react";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
-function TodoItem(items) {
+const TodoItem = ({ task, deleteItem }) => {
   return (
     <li className="items">
-      
       <div className="items-text">
         <input type="checkbox" />
-        {items.task}
+        <p>{task.taskName}</p>
       </div>
-      <RiDeleteBin5Line class="delete-icon" />
+      <RiDeleteBin5Line
+        className="delete-icon"
+        onClick={() => deleteItem(task.taskName)}
+      />
     </li>
   );
-}
+};
 
 export default TodoItem;
