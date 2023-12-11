@@ -1,4 +1,4 @@
-# 📝 ToDo-list
+# 📝 ToDo-list 📝
 
 ## 💻 Process
 
@@ -10,6 +10,11 @@ serves as the entry point to this Todo-List app
 
 responsible for managing the list of tasks and handling task-related functionality
 
+- update value of input box
+- add tasks
+- delete tasks
+- check check box
+
 ### TodoItem Component
 
 represents an individual task in Todo-List
@@ -18,9 +23,13 @@ represents an individual task in Todo-List
 
 ### About React 💡
 
+A JavaScript library for building user interfaces
+
 ### Install
 
+```
 npx create-react-app [project name]
+```
 
 ### Components
 
@@ -32,11 +41,15 @@ All of the built-in browser components support some props and events
 
 ### Hooks
 
-Hooks let you use different React features from your components
+let you use different React features from your components
 
 - State Hooks
+
+  ```
+    import { useState } from "react"
+  ```
+
   - State lets a component “remember” information like user input
-  - import { useState } from "react";
 
 ### Props
 
@@ -55,7 +68,10 @@ JavaScript spread operator (...) allows us to quickly copy all or part of an exi
 
 ### React icons
 
+```
 npm i react-icons<p>
+```
+
 https://react-icons.github.io/react-icons/
 
 ## 🛠️ Trouble Shooting
