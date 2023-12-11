@@ -1,5 +1,9 @@
 # 📝 ToDo-list 📝
 
+you can try it here! : https://yuhyunjeong.github.io/ToDo-list/
+
+![Alt text](ezgif.com-gif-maker.gif)
+
 ## 💻 Process
 
 ### App Component
