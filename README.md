@@ -73,7 +73,7 @@ JavaScript spread operator (...) allows us to quickly copy all or part of an exi
 ### React icons
 
 ```
-npm i react-icons<p>
+npm i react-icons
 ```
 
 https://react-icons.github.io/react-icons/
