@@ -78,6 +78,13 @@ npm i react-icons
 
 https://react-icons.github.io/react-icons/
 
+### React dnd
+
+```
+npm install react-dnd
+npm install react-dnd-html5-backend
+```
+
 ## 🛠️ Trouble Shooting
 
 ### Objects are not valid as a react child
