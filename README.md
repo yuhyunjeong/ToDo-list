@@ -29,10 +29,12 @@ represents an individual task in Todo-List
 
 A JavaScript library for building user interfaces
 
-### Install
+### Install and Run
 
 ```
 npx create-react-app [project name]
+cd [project name]
+npm start
 ```
 
 ### Components
