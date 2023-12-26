@@ -1,52 +1,52 @@
-import React, { useState } from "react";
-import TodoItem from "./TodoItem";
+import React, { useState, useEffect } from "react";
+import ListTodo from "./ListTodo";
+import { v4 as uuidv4 } from "uuid";
 
-function TodoList() {
-  const [inputValue, setInputValue] = useState(""); // update value
+function CreateTodo({ tasks, setTasks }) {
+  const [task, setTask] = useState(""); // update value
+  const [toDoList, setToDoList] = useState([]); // update list
 
-  console.log("inputValue: ", inputValue);
+  console.log("task: ", task);
 
   function handleInputValue(event) {
-    setInputValue(event.target.value);
+    setTask(event.target.value);
     // event.target.value : update the state variable on any edits
   }
 
-  const [toDoList, setToDoList] = useState([]); // update list
-
   const addItem = (taskName) => {
     console.log("i'm here!", taskName);
-    const newTask = { taskName, checked: false };
+    const newTask = { id: uuidv4(), taskName, checked: false };
 
     setToDoList([...toDoList, newTask]); //spread operator
   };
 
-  function deleteItem(deleteItemName) {
-    setToDoList(toDoList.filter((task) => task.taskName !== deleteItemName));
+  function handleAddItem(event) {
+    event.preventDefault();
+    if (task.trim() === "") return;
+    addItem(task);
+    setTask(""); // initialize input box
   }
 
-  function toggleCheck(taskName) {
+  function deleteItem(id) {
+    setToDoList(toDoList.filter((task) => task.id !== id));
+  }
+
+  function toggleCheck(id) {
     setToDoList((prevToDoList) =>
       prevToDoList.map((task) =>
-        task.taskName === taskName ? { ...task, checked: !task.checked } : task
+        task.id === id ? { ...task, checked: !task.checked } : task
       )
     );
   }
 
   console.log(toDoList);
 
-  function handleAddItem(event) {
-    event.preventDefault();
-    if (inputValue.trim() === "") return;
-    addItem(inputValue);
-    setInputValue(""); // initialize input box
-  }
-
   return (
     <div className="container">
       <h1>To Do List</h1>
       <form className="inputField" onSubmit={handleAddItem}>
         <input
-          value={inputValue}
+          value={task}
           type="text"
           placeholder="Add Tasks!"
           onChange={handleInputValue}
@@ -61,9 +61,9 @@ function TodoList() {
           {/* add items */}
           {/* array method */}
           {toDoList.map((task, key) => (
-            <TodoItem
+            <ListTodo
               task={task}
-              key={key}
+              key={task.id}
               deleteItem={deleteItem}
               toggleCheck={toggleCheck}
             />
@@ -76,4 +76,4 @@ function TodoList() {
   );
 }
 
-export default TodoList;
+export default CreateTodo;

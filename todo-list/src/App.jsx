@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import TodoList from "./component/TodoList";
+import CreateTodo from "./component/CreateTodo";
 
 //1. an input box and a button
 //2. enter values in the input box and click the button to add items
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="app">
-      <TodoList />
+      <CreateTodo />
     </div>
   );
 }
