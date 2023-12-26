@@ -10,7 +10,7 @@ you can try it here! : https://yuhyunjeong.github.io/ToDo-list/
 
 serves as the entry point to this Todo-List app
 
-### TodoList Component
+### CreateTodo Component
 
 responsible for managing the list of tasks and handling task-related functionality
 
@@ -19,7 +19,7 @@ responsible for managing the list of tasks and handling task-related functionali
 - delete tasks
 - check check box
 
-### TodoItem Component
+### ListTodo Component
 
 represents an individual task in Todo-List
 
@@ -42,8 +42,17 @@ npm start
 All of the built-in browser components support some props and events
 
 - input
+
   - onChange: <p></p>
     Fires immediately when the input’s value is changed by the user (for example, it fires on every keystroke)
+
+- form
+
+  - onSubmit
+
+  - event.preventDefault():
+
+    cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
 ### Hooks
 
@@ -82,9 +91,20 @@ https://react-icons.github.io/react-icons/
 
 ### React dnd
 
+library for drag and drop
+
 ```
 npm install react-dnd
 npm install react-dnd-html5-backend
+```
+
+### uuid
+
+Universally Unique Identifier
+
+```
+npm install uuid
+import { v4 as uuidv4 } from 'uuid';
 ```
 
 ## 🛠️ Trouble Shooting
