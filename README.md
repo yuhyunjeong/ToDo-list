@@ -97,13 +97,12 @@ npm i react-icons
 
 https://react-icons.github.io/react-icons/
 
-### React dnd
+### React-beautiful-dnd
 
 library for drag and drop
 
 ```
-npm install react-dnd
-npm install react-dnd-html5-backend
+npm install react-beautiful-dnd
 ```
 
 ### uuid
@@ -118,9 +117,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 ### localStorage
 
-allow you to save key/value pairs in the browser<p>
-store data with no expiration date and the data is not deleted when the browser is closed<p></p>
-localStorage can only store strings. To store arrays or objects, you would have to convert them to strings.
+allow you to save key/value pairs in the browser</br>
+store data with no expiration date and the data is not deleted when the browser is closed</br>
+localStorage can only store strings
 
 ```
 localStorage.setItem("todoList", JSON.stringify(toDoList));
