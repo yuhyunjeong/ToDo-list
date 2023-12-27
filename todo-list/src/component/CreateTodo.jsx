@@ -48,10 +48,6 @@ function CreateTodo() {
     setTask(""); // initialize input box
   }
 
-  function deleteTask(id) {
-    setToDoList(toDoList.filter((task) => task.id !== id));
-  }
-
   function toggleCheck(id) {
     setToDoList((prevToDoList) =>
       prevToDoList.map((task) =>
@@ -60,15 +56,15 @@ function CreateTodo() {
     );
   }
 
-  const deleteAllChecked = () => {
-    setToDoList(toDoList.filter((task) => !task.checked));
-  };
-
   const toggleSelectAll = () => {
     setSelectAll(!selectAll);
     setToDoList((prevToDoList) =>
       prevToDoList.map((task) => ({ ...task, checked: !selectAll }))
     );
+  };
+
+  const deleteChecked = () => {
+    setToDoList(toDoList.filter((task) => !task.checked));
   };
 
   const onDragEnd = (result) => {
@@ -104,10 +100,7 @@ function CreateTodo() {
             onChange={toggleSelectAll}
           />
           <span style={{ paddingLeft: "15px" }}>To Do</span>
-          <RiDeleteBin5Line
-            className="delete-icon"
-            onClick={deleteAllChecked}
-          />
+          <RiDeleteBin5Line className="delete-icon" onClick={deleteChecked} />
         </div>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="toDoList">
@@ -124,7 +117,6 @@ function CreateTodo() {
                     task={task}
                     key={task.id}
                     index={index}
-                    deleteItem={deleteTask}
                     toggleCheck={toggleCheck}
                   />
                 ))}

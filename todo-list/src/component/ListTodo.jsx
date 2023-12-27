@@ -1,7 +1,6 @@
-//import { RiDeleteBin5Line } from "react-icons/ri";
 import { Draggable } from "react-beautiful-dnd";
 
-function ListTodo({ task, index, deleteItem, toggleCheck }) {
+function ListTodo({ task, index, toggleCheck }) {
   return (
     <Draggable draggableId={task.id} index={index}>
       {(provided) => (
@@ -19,11 +18,6 @@ function ListTodo({ task, index, deleteItem, toggleCheck }) {
             />
             <p className={task.checked ? "isChecked" : ""}>{task.taskName}</p>
           </div>
-
-          {/*<RiDeleteBin5Line
-            className="delete-icon"
-            onClick={() => deleteItem(task.id)}
-      />*/}
         </li>
       )}
     </Draggable>
