@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { RiDeleteBin5Line } from "react-icons/ri";
+
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import ListTodo from "./ListTodo";
 import { v4 as uuidv4 } from "uuid";
@@ -10,6 +12,8 @@ function CreateTodo() {
       ? JSON.parse(localStorage.getItem("todoList"))
       : []
   ); // Keep list on refresh and update list
+
+  const [selectAll, setSelectAll] = useState(false);
 
   console.log("task: ", task);
 
@@ -44,10 +48,6 @@ function CreateTodo() {
     setTask(""); // initialize input box
   }
 
-  function deleteTask(id) {
-    setToDoList(toDoList.filter((task) => task.id !== id));
-  }
-
   function toggleCheck(id) {
     setToDoList((prevToDoList) =>
       prevToDoList.map((task) =>
@@ -55,6 +55,17 @@ function CreateTodo() {
       )
     );
   }
+
+  const toggleSelectAll = () => {
+    setSelectAll(!selectAll);
+    setToDoList((prevToDoList) =>
+      prevToDoList.map((task) => ({ ...task, checked: !selectAll }))
+    );
+  };
+
+  const deleteChecked = () => {
+    setToDoList(toDoList.filter((task) => !task.checked));
+  };
 
   const onDragEnd = (result) => {
     if (!result.destination) return;
@@ -82,7 +93,15 @@ function CreateTodo() {
         <button type="submit">+</button>
       </form>
       <div className="toDoList">
-        <span>To Do</span>
+        <div className="all-check">
+          <input
+            type="checkbox"
+            checked={selectAll}
+            onChange={toggleSelectAll}
+          />
+          <span style={{ paddingLeft: "15px" }}>To Do</span>
+          <RiDeleteBin5Line className="delete-icon" onClick={deleteChecked} />
+        </div>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="toDoList">
             {(provided) => (
@@ -98,7 +117,6 @@ function CreateTodo() {
                     task={task}
                     key={task.id}
                     index={index}
-                    deleteItem={deleteTask}
                     toggleCheck={toggleCheck}
                   />
                 ))}

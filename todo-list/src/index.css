@@ -105,6 +105,12 @@ input[type="checkbox"] {
   padding: 5px;
   cursor: pointer;
 }
+.all-check {
+  padding-left: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .items-text {
   display: flex;
   align-items: center;
@@ -121,6 +127,7 @@ input[type="checkbox"] {
 }
 
 .delete-icon {
+  color: rgba(244, 180, 220, 0.981);
   width: 40px;
   height: 40px;
   font-size: 27px !important;

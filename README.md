@@ -18,6 +18,7 @@ responsible for managing the list of tasks and handling task-related functionali
 - add & delete tasks
 - check check box
 - keep the list on refresh or browser on/off (localStorage)
+- drag and drop tasks of list
 
 ### ListTodo Component
 
@@ -119,7 +120,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 allow you to save key/value pairs in the browser</br>
 store data with no expiration date and the data is not deleted when the browser is closed</br>
-localStorage can only store strings
+can only store strings
 
 ```
 localStorage.setItem("todoList", JSON.stringify(toDoList));
