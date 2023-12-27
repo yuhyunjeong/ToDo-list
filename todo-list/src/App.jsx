@@ -10,9 +10,11 @@ function App() {
   //const [inputValue, setInputValue] = useState(""); // update value
 
   return (
+    // <React.StrictMode>
     <div className="app">
       <CreateTodo />
     </div>
+    // </React.StrictMode>
   );
 }
 

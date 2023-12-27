@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import ListTodo from "./ListTodo";
 import { v4 as uuidv4 } from "uuid";
 
@@ -30,7 +31,7 @@ function CreateTodo() {
 
   const addTask = (taskName) => {
     console.log("i'm here!", taskName);
-    const newTask = { id: uuidv4(), taskName, checked: false };
+    const newTask = { id: uuidv4().toString(), taskName, checked: false };
 
     //setToDoList([...toDoList, newTask]); //spread operator
     setToDoList((prevList) => [...prevList, newTask]);
@@ -55,6 +56,16 @@ function CreateTodo() {
     );
   }
 
+  const onDragEnd = (result) => {
+    if (!result.destination) return;
+
+    const updatedList = Array.from(toDoList);
+    const [movedItem] = updatedList.splice(result.source.index, 1);
+    updatedList.splice(result.destination.index, 0, movedItem);
+
+    setToDoList(updatedList);
+  };
+
   console.log(toDoList);
 
   return (
@@ -72,20 +83,30 @@ function CreateTodo() {
       </form>
       <div className="toDoList">
         <span>To Do</span>
-
-        <ul className="list-items">
-          {/* add items */}
-          {/* array method */}
-          {toDoList.map((task) => (
-            <ListTodo
-              task={task}
-              key={task.id}
-              deleteItem={deleteTask}
-              toggleCheck={toggleCheck}
-            />
-          ))}
-        </ul>
-
+        <DragDropContext onDragEnd={onDragEnd}>
+          <Droppable droppableId="toDoList">
+            {(provided) => (
+              <ul
+                className="list-items"
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
+                {/* add items */}
+                {/* array method */}
+                {toDoList.map((task, index) => (
+                  <ListTodo
+                    task={task}
+                    key={task.id}
+                    index={index}
+                    deleteItem={deleteTask}
+                    toggleCheck={toggleCheck}
+                  />
+                ))}
+                {provided.placeholder}
+              </ul>
+            )}
+          </Droppable>
+        </DragDropContext>
         {toDoList.length === 0 ? <p className="notify">You can rest!</p> : null}
       </div>
     </div>
