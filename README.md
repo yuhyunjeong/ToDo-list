@@ -134,3 +134,7 @@ const storedList = JSON.parse(localStorage.getItem("todoList"));
 
 - Cause : Passing an Object as a React Child
 - Solution : Rendering Object Properties
+
+### Unable to find draggable with id
+
+- Solution : Removing StrictMode in index.js
