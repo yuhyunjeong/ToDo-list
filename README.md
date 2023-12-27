@@ -15,9 +15,9 @@ serves as the entry point to this Todo-List app
 responsible for managing the list of tasks and handling task-related functionality
 
 - update value of input box
-- add tasks
-- delete tasks
+- add & delete tasks
 - check check box
+- keep the list on refresh or browser on/off (localStorage)
 
 ### ListTodo Component
 
@@ -58,13 +58,21 @@ All of the built-in browser components support some props and events
 
 let you use different React features from your components
 
-- State Hooks
+- useState
 
   ```
     import { useState } from "react"
   ```
 
   - State lets a component “remember” information like user input
+
+- useEffect
+
+  ```
+    import { useEffect } from "react"
+  ```
+
+  - let you synchronize a component with an external system.
 
 ### Props
 
@@ -104,7 +112,20 @@ Universally Unique Identifier
 
 ```
 npm install uuid
+
 import { v4 as uuidv4 } from 'uuid';
+```
+
+### localStorage
+
+allow you to save key/value pairs in the browser<p>
+store data with no expiration date and the data is not deleted when the browser is closed<p></p>
+localStorage can only store strings. To store arrays or objects, you would have to convert them to strings.
+
+```
+localStorage.setItem("todoList", JSON.stringify(toDoList));
+
+const storedList = JSON.parse(localStorage.getItem("todoList"));
 ```
 
 ## 🛠️ Trouble Shooting

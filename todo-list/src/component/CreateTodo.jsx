@@ -28,7 +28,7 @@ function CreateTodo() {
     // event.target.value : update the state variable on any edits
   }
 
-  const addItem = (taskName) => {
+  const addTask = (taskName) => {
     console.log("i'm here!", taskName);
     const newTask = { id: uuidv4(), taskName, checked: false };
 
@@ -36,14 +36,14 @@ function CreateTodo() {
     setToDoList((prevList) => [...prevList, newTask]);
   };
 
-  function handleAddItem(event) {
+  function handleAddTask(event) {
     event.preventDefault();
     if (task.trim() === "") return;
-    addItem(task);
+    addTask(task);
     setTask(""); // initialize input box
   }
 
-  function deleteItem(id) {
+  function deleteTask(id) {
     setToDoList(toDoList.filter((task) => task.id !== id));
   }
 
@@ -60,7 +60,7 @@ function CreateTodo() {
   return (
     <div className="container">
       <h1>To Do List</h1>
-      <form className="inputField" onSubmit={handleAddItem}>
+      <form className="inputField" onSubmit={handleAddTask}>
         <input
           value={task}
           type="text"
@@ -80,7 +80,7 @@ function CreateTodo() {
             <ListTodo
               task={task}
               key={task.id}
-              deleteItem={deleteItem}
+              deleteItem={deleteTask}
               toggleCheck={toggleCheck}
             />
           ))}
