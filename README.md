@@ -2,6 +2,10 @@
 
 you can try it here! : https://yuhyunjeong.github.io/ToDo-list/
 
+![Alt text](todolistupdate.gif)
+
+### before <p>
+
 ![Alt text](todolist.gif)
 
 ## 💻 Process
@@ -16,7 +20,7 @@ responsible for managing the list of tasks and handling task-related functionali
 
 - update value of input box
 - add & delete tasks
-- check check box
+- check check boxes
 - keep the list on refresh or browser on/off (localStorage)
 - drag and drop tasks of list
 
