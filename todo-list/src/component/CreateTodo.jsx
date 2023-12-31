@@ -99,7 +99,8 @@ function CreateTodo() {
             checked={selectAll}
             onChange={toggleSelectAll}
           />
-          <span style={{ paddingLeft: "15px" }}>To Do</span>
+
+          {/*<span style={{ paddingLeft: "15px" }}>To Do</span>*/}
           <RiDeleteBin5Line className="delete-icon" onClick={deleteChecked} />
         </div>
         <DragDropContext onDragEnd={onDragEnd}>
