@@ -68,10 +68,6 @@ body {
   transition: all 0.5s;
 }
 
-button:hover {
-  transform: rotate(90deg);
-}
-
 /* to do list style */
 .toDoList {
   margin-top: 2rem;
