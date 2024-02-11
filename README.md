@@ -132,6 +132,50 @@ localStorage.setItem("todoList", JSON.stringify(toDoList));
 const storedList = JSON.parse(localStorage.getItem("todoList"));
 ```
 
+### .sr-only
+
+https://css-tricks.com/inclusively-hidden/
+
+using the .sr-only class, we ensure that the form field has an accessible label for screen reader users while remaining visually hidden
+
+```
+<label htmlFor="taskInput" className="sr-only">
+          Input Task:
+        </label>
+        <input
+          id="taskInput"
+          value={task}
+          type="text"
+          placeholder="Add Tasks!"
+          onChange={handleInputValue}
+        />
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); // Specifies the visible region of the element
+  clip-path: inset(50%);
+  width: 1px; // make it visually hidden
+  height: 1px; // make it visually hidden
+  overflow: hidden; // Specifies how content that overflows the element's box should be handled
+  position: absolute; // Positions the element absolutely, allowing it to be placed at a specific location on the page without affecting other elements
+  white-space: nowrap; // Specifies how white space inside the element is handled. It's set to 'nowrap' to ensure the text is displayed on a single line
+}
+```
+
+### aria-label and aria-hidden
+
+- aria-hidden="true" is used to hide an element and its descendants from assistive technologies such as screen readers. This attribute ensures that the element and its content are not announced to users of assistive technology, while still being visible on the screen.
+
+- aria-label is used to provide a concise label or description for an element. It is typically applied to interactive elements like buttons or links to describe their purpose or action.
+
+```
+<button type="submit" aria-label="Add Task">
+    <span aria-hidden="true">+</span>
+</button>
+```
+
 ## 🛠️ Trouble Shooting
 
 ### Objects are not valid as a react child

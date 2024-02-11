@@ -83,25 +83,46 @@ function CreateTodo() {
     <div className="container">
       <h1>To Do List</h1>
       <form className="inputField" onSubmit={handleAddTask}>
+        <label htmlFor="taskInput" className="sr-only">
+          Input Task:
+        </label>
         <input
+          id="taskInput"
           value={task}
           type="text"
           placeholder="Add Tasks!"
           onChange={handleInputValue}
         />
 
-        <button type="submit">+</button>
+        {/*aria-hidden="true" hides the element itself
+          aria-label provides a description for the element*/}
+        <button type="submit" aria-label="Add Task">
+          <span aria-hidden="true">+</span>
+        </button>
       </form>
+
       <div className="toDoList">
-        <div className="all-check">
-          <input
-            type="checkbox"
-            checked={selectAll}
-            onChange={toggleSelectAll}
-          />
+        <div className="check">
+          <span className="all-check">
+            <input
+              type="checkbox"
+              checked={selectAll}
+              onChange={toggleSelectAll}
+              id="selectAll"
+            />
+            <label htmlFor="selectAll">Select All</label>
+          </span>
 
           {/*<span style={{ paddingLeft: "15px" }}>To Do</span>*/}
-          <RiDeleteBin5Line className="delete-icon" onClick={deleteChecked} />
+
+          <span className="delete">
+            delete
+            <RiDeleteBin5Line
+              className="delete-icon"
+              onClick={deleteChecked}
+              aria-label="Delete Checked Tasks"
+            />
+          </span>
         </div>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="toDoList">

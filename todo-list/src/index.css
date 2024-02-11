@@ -54,6 +54,18 @@ body {
   color: rgba(244, 180, 220, 0.981);
 }
 
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
 .inputField button {
   background: rgba(242, 91, 184, 0.957);
   color: #fff;
@@ -70,7 +82,7 @@ body {
 
 /* to do list style */
 .toDoList {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .toDoList span {
   /*color: rgb(161, 160, 160);*/
@@ -101,10 +113,10 @@ input[type="checkbox"] {
   padding: 5px;
   cursor: pointer;
 }
-.all-check {
+.check {
   padding-left: 14px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .items-text {
@@ -122,6 +134,16 @@ input[type="checkbox"] {
   color: rgba(244, 180, 220, 0.981);
 }
 
+.all-check {
+  display: flex;
+  gap: 15px;
+}
+.delete {
+  text-align: -webkit-center;
+  margin-left: auto;
+  padding-right: 14px;
+}
+
 .delete-icon {
   color: rgba(244, 180, 220, 0.981);
   width: 40px;
@@ -129,7 +151,7 @@ input[type="checkbox"] {
   font-size: 27px !important;
   cursor: pointer;
   border-radius: 50%;
-  padding: 5px;
+
   display: block;
 }
 .delete-icon:hover {
