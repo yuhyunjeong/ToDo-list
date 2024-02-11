@@ -116,12 +116,12 @@ function CreateTodo() {
           {/*<span style={{ paddingLeft: "15px" }}>To Do</span>*/}
 
           <span className="delete">
-            delete
             <RiDeleteBin5Line
               className="delete-icon"
               onClick={deleteChecked}
               aria-label="Delete Checked Tasks"
             />
+            delete
           </span>
         </div>
         <DragDropContext onDragEnd={onDragEnd}>

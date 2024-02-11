@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Monoton:wght@200;300;400;500;600;700;800&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  list-style: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+
 body {
   background: rgba(240, 75, 177, 0.423);
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
 }
 .container {
   width: 350px;
@@ -18,6 +14,8 @@ body {
   /* margin: 5rem auto; */
   margin: 3rem auto;
   border-radius: 5px;
+
+  box-sizing: border-box;
 }
 .container h1 {
   text-align: center;
@@ -29,11 +27,10 @@ body {
   font-weight: 400;
   word-spacing: 5px;
   letter-spacing: 5px;
-  padding: 2.4rem 0;
+  padding: 1rem;
 }
 
 .inputField {
-  width: 100%;
   padding: 5px 1rem;
   background: #b592dc52;
   border-radius: 30px;
@@ -48,6 +45,9 @@ body {
   padding: 10px;
   color: rgba(244, 180, 220, 0.981);
   font-size: 1rem;
+
+  border: none;
+  outline: none;
 }
 .inputField input::placeholder {
   /*color: rgb(161, 160, 160);*/
@@ -78,6 +78,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s;
+  border: none;
 }
 
 /* to do list style */
@@ -91,7 +92,9 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
-
+ul {
+  padding-inline-start: 0px;
+}
 .toDoList .list-items {
   margin-top: 1rem;
   display: flex;
@@ -102,7 +105,8 @@ body {
 .list-items .items {
   background: #b592dc52;
   border-radius: 10px;
-  padding: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
   display: flex;
   align-items: center;
   /*justify-content: space-between;*/
@@ -146,8 +150,8 @@ input[type="checkbox"] {
 
 .delete-icon {
   color: rgba(244, 180, 220, 0.981);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   font-size: 27px !important;
   cursor: pointer;
   border-radius: 50%;
