@@ -65,6 +65,7 @@ function CreateTodo() {
 
   const deleteChecked = () => {
     setToDoList(toDoList.filter((task) => !task.checked));
+    setSelectAll(false); // initialize all checkbox
   };
 
   const onDragEnd = (result) => {

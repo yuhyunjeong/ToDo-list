@@ -2,11 +2,25 @@
 
 you can try it here! : https://yuhyunjeong.github.io/ToDo-list/
 
-![Alt text](todolistupdate.gif)
+![Alt text](todolist_3.gif)
 
-### before <p>
+<details>
+<summary>ver2</summary>
+<div markdown="1">
+
+![Alt text](todolist_2.gif)
+
+</div>
+</details>
+
+<details>
+<summary>ver1</summary>
+<div markdown="1">
 
 ![Alt text](todolist.gif)
+
+</div>
+</details>
 
 ## 💻 Process
 
