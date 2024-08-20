@@ -200,3 +200,13 @@ using the .sr-only class, we ensure that the form field has an accessible label 
 ### Unable to find draggable with id
 
 - Solution : Removing StrictMode in index.js
+
+### github page update
+
+```
+npm run deploy
+
+// in package.json
+// "predeploy" : "npm run build" +
+// "deploy" : "gh-pages -d build"
+```
