@@ -22,7 +22,7 @@ body {
   font-family: monospace;
   /* color: rgb(161, 160, 160);*/
   color: rgba(244, 180, 220, 0.981);
-  text-shadow: 3px 3px 0 #e4cdff64;
+  text-shadow: 2.6px 2.6px 0 #e4cdff64;
 
   font-size: 35px;
   text-transform: uppercase;
@@ -69,8 +69,8 @@ body {
 }
 
 .inputField button {
-  background: rgba(242, 91, 184, 0.957);
-  color: #fff;
+  background: rgb(246, 98, 189);
+  color: white;
   font-size: 2rem;
   width: 35px;
   height: 35px;
@@ -80,7 +80,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s;
-  border: none;
+  border: 1.5px solid white;
 }
 
 /* to do list style */
@@ -114,6 +114,7 @@ ul {
   /*justify-content: space-between;*/
   /*color: rgb(186, 186, 186);*/
   color: rgba(244, 180, 220, 0.981);
+  box-shadow: 0 2px 0 rgba(244, 180, 220, 0.5);
 }
 input[type="checkbox"] {
   padding: 5px;
