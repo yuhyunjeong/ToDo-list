@@ -148,7 +148,9 @@ function CreateTodo() {
             )}
           </Droppable>
         </DragDropContext>
-        {toDoList.length === 0 ? <p className="notify">You can rest!</p> : null}
+        {toDoList.length === 0 ? (
+          <p className="notify">You can rest :)</p>
+        ) : null}
       </div>
     </div>
   );
