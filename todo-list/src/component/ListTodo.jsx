@@ -11,14 +11,17 @@ function ListTodo({ task, index, toggleCheck }) {
           className="items"
         >
           <div className="items-text">
-            <input
-              type="checkbox"
-              id={`task${task.id}`}
-              checked={task.checked}
-              onChange={() => toggleCheck(task.id)}
-            />
+            <label className={task.checked ? "isChecked" : ""}>
+              <input
+                type="checkbox"
+                id={`task${task.id}`}
+                checked={task.checked}
+                onChange={() => toggleCheck(task.id)}
+              />
+              <span className="checkmark"></span>
 
-            <p className={task.checked ? "isChecked" : ""}>{task.taskName}</p>
+              {task.taskName}
+            </label>
             {task.checked && ( // when checked only
               <label htmlFor={`task${task.id}`}>Done</label>
             )}

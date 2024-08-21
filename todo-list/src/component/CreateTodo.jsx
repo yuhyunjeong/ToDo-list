@@ -104,15 +104,16 @@ function CreateTodo() {
 
       <div className="toDoList">
         <div className="check">
-          <span className="all-check">
+          <label htmlFor="selectAll">
             <input
               type="checkbox"
               checked={selectAll}
               onChange={toggleSelectAll}
               id="selectAll"
             />
-            <label htmlFor="selectAll">Select All</label>
-          </span>
+            <span className="all-check"></span>
+            Select All
+          </label>
 
           {/*<span style={{ paddingLeft: "15px" }}>To Do</span>*/}
 

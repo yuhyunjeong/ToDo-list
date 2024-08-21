@@ -125,41 +125,76 @@ ul {
 
   font-size: 25px;
 }
-.list-items .items p {
+.list-items .items label {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-input[type="checkbox"] {
-  padding: 5px;
-  cursor: pointer;
-}
+
 .check {
   padding-left: 14px;
   display: flex;
   align-items: center;
+
+  color: rgba(244, 180, 220, 0.981);
+
+  font-family: "Nanum Brush Script", fantasy;
+}
+.check label {
+  font-size: x-large;
+}
+
+input[type="checkbox"] {
+  padding: 5px;
+  cursor: pointer;
+
+  display: none;
+}
+.all-check,
+.checkmark {
+  /*display: flex;
+  gap: 10px;
+*/
+  position: relative;
+  display: inline-block;
+
+  width: 15px;
+  height: 15px;
+  /*
+  background-color: #eee;
+  border-radius: 2px;*/
+  margin-right: 10px;
+}
+input[type="checkbox"]:checked + .all-check,
+input[type="checkbox"]:checked + .checkmark {
+  color: hotpink;
+}
+.check .all-check::before,
+.items-text .checkmark::before {
+  content: "♥️";
+
+  position: absolute;
+
+  left: -5px;
+  top: -10px;
 }
 
 .items-text {
   display: flex;
   align-items: center;
+
   gap: 10px;
 }
 .items-text div {
   color: red;
   overflow: hidden;
 }
-.items-text label {
-}
+
 .notify {
   text-align: center;
   /*color: rgb(161, 160, 160);*/
   color: rgba(244, 180, 220, 0.981);
 }
 
-.all-check {
-  display: flex;
-  gap: 10px;
-}
 .delete {
   text-align: -webkit-center;
   margin-left: auto;

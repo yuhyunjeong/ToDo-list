@@ -2,26 +2,6 @@
 
 you can try it here! : https://yuhyunjeong.github.io/ToDo-list/
 
-![Alt text](todolist_3.gif)
-
-<details>
-<summary>ver2</summary>
-<div markdown="1">
-
-![Alt text](todolist_2.gif)
-
-</div>
-</details>
-
-<details>
-<summary>ver1</summary>
-<div markdown="1">
-
-![Alt text](todolist.gif)
-
-</div>
-</details>
-
 ## 💻 Process
 
 ### App Component
