@@ -21,11 +21,21 @@ function CreateTodo() {
   useEffect(() => {
     const storedList = JSON.parse(localStorage.getItem("todoList")) || [];
     setToDoList(storedList);
+
+    // Check if all tasks are checked
+    const allChecked =
+      storedList.length > 0 && storedList.every((task) => task.checked);
+    setSelectAll(allChecked);
   }, []);
 
   // Save to localStorage whenever toDoList changes
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(toDoList));
+
+    // Check if all tasks are checked after updating the list
+    const allChecked =
+      toDoList.length > 0 && toDoList.every((task) => task.checked);
+    setSelectAll(allChecked);
   }, [toDoList]);
 
   function handleInputValue(event) {
