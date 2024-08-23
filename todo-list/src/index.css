@@ -16,6 +16,8 @@ body {
   border-radius: 5px;
 
   box-sizing: border-box;
+
+  box-shadow: 0 5px 10px rgba(40, 40, 81, 0.6);
 }
 .container h1 {
   margin: 10px;
