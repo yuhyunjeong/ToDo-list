@@ -1,6 +1,12 @@
 # 📝 ToDo-list 📝
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-ffc0cb.svg)](https://opensource.org/licenses/MIT)
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 you can try it here! : https://yuhyunjeong.github.io/ToDo-list/
+
 
 ## 💻 Process
 
